@@ -1,5 +1,5 @@
 import time, sys, os
-#os.system('sudo apt-get update')
+os.system('sudo apt-get update')
 print("Instagram Follower Bot")
 name = input('Enter your Username : ')
 print("Scanning For Username that go by: %s" % name);
