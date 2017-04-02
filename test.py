@@ -16,14 +16,6 @@ import time, sys
 def update_progress(progress):
     barLength = 1 # Modify this to change the length of the progress bar
     status = ""
-    if isinstance(progress, int):
-        progress = float(progress)
-    if not isinstance(progress, float):
-        progress = 0
-        status = ""
-    if progress < 0:
-        progress = 0
-        status = "Halt...\r\n"
     if progress >= 100:
         progress = 100
         status = "Done...\r\n"
