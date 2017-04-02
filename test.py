@@ -27,9 +27,6 @@ def update_progress(progress):
 
 # update_progress test script
 print "__________Starting__________"
-update_progress("hello")
-time.sleep(1)
-
 print "Mounting"
 for x in range(1, 101):
     update_progress(x)
