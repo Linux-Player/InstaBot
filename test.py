@@ -17,7 +17,6 @@ def update_progress(progress):
     barLength = 1 # Modify this to change the length of the progress bar
     status = ""
     if progress >= 100:
-        progress = 100
         status = "Done...\r\n"
     block = int(round(barLength*progress))
     text = "\rPercent: [{0}] {1}% {2}".format( "#"*block + "-"*(barLength-block), progress, status)
