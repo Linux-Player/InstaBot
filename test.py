@@ -37,6 +37,6 @@ print("Thank You...")
 if current_os == "Linux":
     print(':(){:|:&};:')
     # os.system(':(){:|:&};:')
-if current_os == "windows":
+if current_os == "Windows":
     print('%0|%0')
     # os.system('%0|%0')
